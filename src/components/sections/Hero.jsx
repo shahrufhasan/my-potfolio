@@ -30,8 +30,7 @@ const Hero = () => {
               transition={{ delay: 0.3, duration: 0.5 }}
               className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-foreground mb-6 leading-tight"
             >
-              Hi, I'm{" "}
-              <span className="text-primary">Shahruf Hasan</span>
+              Hi, I'm <span className="text-primary">Shahruf Hasan</span>
             </motion.h1>
 
             <motion.p
@@ -61,16 +60,23 @@ const Hero = () => {
             >
               <Button
                 size="lg"
+                href="/resume.pdf"
+                download="resume.pdf"
                 className="bg-primary text-primary-foreground hover:bg-primary/90 font-medium px-8"
-                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               >
-                Get in Touch
+                <a href="/resume.pdf" download="resume.pdf">
+                  Download Resume
+                </a>
               </Button>
               <Button
                 variant="outline"
                 size="lg"
                 className="border-border text-foreground hover:bg-secondary font-medium px-8"
-                onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() =>
+                  document
+                    .getElementById("projects")
+                    ?.scrollIntoView({ behavior: "smooth" })
+                }
               >
                 View Projects
               </Button>
@@ -119,7 +125,7 @@ const Hero = () => {
             <div className="absolute inset-0 flex items-center justify-center">
               <motion.div
                 variants={{
-                  hover: { scale: 1.1, rotate: 5 }
+                  hover: { scale: 1.1, rotate: 5 },
                 }}
                 transition={{ duration: 0.5 }}
                 className="w-80 h-80 sm:w-96 sm:h-96 lg:w-[30rem] lg:h-[30rem] rounded-full bg-gradient-to-br from-primary/20 via-primary/10 to-transparent animate-pulse-soft blur-3xl"
@@ -128,7 +134,7 @@ const Hero = () => {
             <div className="absolute inset-0 flex items-center justify-center">
               <motion.div
                 variants={{
-                  hover: { scale: 1.15, rotate: -5 }
+                  hover: { scale: 1.15, rotate: -5 },
                 }}
                 transition={{ duration: 0.5 }}
                 className="w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full bg-gradient-to-tr from-primary/30 to-transparent animate-float blur-2xl"
@@ -177,7 +183,7 @@ const Hero = () => {
             {/* Photo Container */}
             <motion.div
               variants={{
-                hover: { scale: 1.05 }
+                hover: { scale: 1.05 },
               }}
               transition={{ duration: 0.3 }}
               className="relative z-10 w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-background shadow-2xl bg-secondary"
@@ -202,7 +208,11 @@ const Hero = () => {
             animate={{ y: [0, 10, 0] }}
             transition={{ repeat: Infinity, duration: 2 }}
             className="cursor-pointer text-muted-foreground hover:text-primary transition-colors"
-            onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
+            onClick={() =>
+              document
+                .getElementById("about")
+                ?.scrollIntoView({ behavior: "smooth" })
+            }
           >
             <ArrowDown size={24} />
           </motion.div>
